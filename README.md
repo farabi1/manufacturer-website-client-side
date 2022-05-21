@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Create React App, Tailwind, Daisy UI, React Router
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This manufacturer project was build with [Create React App](https://manufacturer-client-side.web.app/).
 
 ## Available Scripts
 
