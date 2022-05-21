@@ -1,6 +1,6 @@
 # Getting Started with Create React App, Tailwind, Daisy UI, React Router
 
-This is a manufacturer project[Manufacturer-Client-Side](https://manufacturer-client-side.web.app/).
+This is a manufacturer project [Manufacturer-Client-Side](https://manufacturer-client-side.web.app/).
 
 ## Available Scripts
 
