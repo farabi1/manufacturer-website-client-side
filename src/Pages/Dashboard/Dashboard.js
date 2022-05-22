@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 
 const Dashboard = () => {
@@ -6,6 +7,7 @@ const Dashboard = () => {
         <div>
             <Header></Header>
             <h1>Dashboard</h1>
+            <Footer></Footer>
         </div>
     );
 };

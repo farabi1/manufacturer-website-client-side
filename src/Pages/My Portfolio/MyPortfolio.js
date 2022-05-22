@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 
 const MyPortfolio = () => {
@@ -6,6 +7,7 @@ const MyPortfolio = () => {
         <div>
             <Header></Header>
             <h1>My Portfolio</h1>
+            <Footer></Footer>
         </div>
     );
 };

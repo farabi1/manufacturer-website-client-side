@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
 
 const Login = () => {
@@ -6,6 +7,7 @@ const Login = () => {
         <div>
             <Header></Header>
             <h1>Login</h1>
+            <Footer></Footer>
         </div>
     );
 };
