@@ -4,11 +4,13 @@ import Header from '../../../Components/Header/Header';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
+import Loading from '../../../Components/Loading/Loading';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
 
-    const [signInWithGoogle, guser, gloading, gerror] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -19,12 +21,23 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    if (user) {
-        console.log(user);
+
+    let signInError;
+
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
+
+    if (error || gError) {
+        signInError = <h3 className=' text-red-600'>{error?.message || gError?.message}</h3>
+    }
+    if (user || gUser) {
+        console.log(user || gUser);
     }
 
     const onSubmit = data => {
         console.log(data)
+        signInWithEmailAndPassword(data.email, data.password);
     };
 
     return (
@@ -93,11 +106,11 @@ const Login = () => {
                                 </label>
                             </div>
 
-
+                            {signInError}
                             <input className="btn btn-outline btn-primary w-full max-w-xs my-5" type="submit" value="Login" />
                         </form>
 
-
+                        <p className='text-black'>Don't have an account? <Link className='text-primary' to="/signup">Register Now</Link></p>
                         <div className="divider text-black font-bold text-sm">OR</div>
 
                         <button
