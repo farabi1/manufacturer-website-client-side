@@ -1,8 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import UserOrders from './Components/Auth Nested Route/User/UserOrders/UserOrders';
-import UserProfile from './Components/Auth Nested Route/User/UserProfile/UserProfile';
-import UserReviews from './Components/Auth Nested Route/User/UserReviews/UserReviews';
+import MyOrders from './Components/Auth Nested Route/User/MyOrders/MyOrders';
+import MyProfile from './Components/Auth Nested Route/User/MyProfile/MyProfile';
+import AddReviews from './Components/Auth Nested Route/User/MyReviews/AddReviews';
+
+
+
 import Login from './Pages/Auth/Login/Login';
 import Purchase from './Pages/Auth/Purchase/Purchase';
 import RequireAuth from './Pages/Auth/RequireAuth/RequireAuth';
@@ -23,9 +26,9 @@ function App() {
             <Dashboard />
           </RequireAuth>
         }>
-          <Route index element={<UserOrders></UserOrders>}></Route>
-          <Route path="userprofile" element={<UserProfile></UserProfile>}></Route>
-          <Route path="userreviews" element={<UserReviews></UserReviews>}></Route>
+          <Route index element={<MyOrders></MyOrders>}></Route>
+          <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="addreviews" element={<AddReviews></AddReviews>}></Route>
         </Route>
         <Route path="myportfolio" element={<MyPortfolio />} />
         <Route path="purchase/:purchaseId" element={
