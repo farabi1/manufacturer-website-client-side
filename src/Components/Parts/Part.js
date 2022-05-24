@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const Part = ({ part }) => {
     const { _id, img, name, text, rate, price } = part;
 
+
     const navigate = useNavigate();
 
     const navigateToPartsDetail = id => {
@@ -19,7 +20,7 @@ const Part = ({ part }) => {
                     <p>Per piece : ${rate}</p>
                     <p>Price : ${price}</p>
                     <div className="card-actions justify-center">
-                        <button onClick={() => navigateToPartsDetail(_id)} className="btn btn-primary">Buy Now</button>
+                        <button onClick={() => navigateToPartsDetail(_id)} className="btn btn-primary">Show Details</button>
                     </div>
                 </div>
             </div>

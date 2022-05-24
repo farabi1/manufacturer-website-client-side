@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import PurchaseModal from '../../Pages/Auth/Purchase/PurchaseModal';
 import Part from './Part';
 
 const Parts = () => {
     const [parts, setParts] = useState([]);
+
+
     useEffect(() => {
         fetch('http://localhost:5000/purchase')
             .then(res => res.json())
@@ -18,6 +21,7 @@ const Parts = () => {
                     parts.map(part => <Part key={part._id} part={part}></Part>)
                 }
             </div>
+
         </div>
     );
 };

@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
+import PurchaseModal from './PurchaseModal';
 
 const Purchase = () => {
+    const [purchase, setPurchase] = useState(null);
 
     const { purchaseId } = useParams();
 
@@ -31,10 +33,12 @@ const Purchase = () => {
                     <p>Price : ${parts.price}</p>
                     <div className="card-actions justify-center">
 
+                        <label onClick={() => setPurchase(parts)} for="purchase-modal" className="btn btn-primary">Buy Now</label>
                     </div>
                 </div>
             </div>
             <Footer></Footer>
+            {purchase && <PurchaseModal purchase={purchase}></PurchaseModal>}
         </div>
     );
 };
