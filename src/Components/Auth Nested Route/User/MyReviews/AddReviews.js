@@ -24,13 +24,13 @@ const AddReviews = () => {
 
     return (
         <div>
-            <h1 className='my-6'>Add a Review</h1>
-            <form className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
+            <h1 className='my-6 text-center'>Add a Review</h1>
+            <form className='flex flex-col items-center' onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" placeholder="Name" className="input input-bordered input-accent w-full max-w-xs" {...register("name", { required: true, maxLength: 20 })} />
                 <input type="text" placeholder="Review" className="input input-bordered input-accent w-full max-w-xs my-6" {...register("text", { required: true, maxLength: 20 })} />
                 <input type="text" placeholder="Rating" className="input input-bordered input-accent w-full max-w-xs" {...register("rate", { required: true, maxLength: 20 })} />
 
-                <input className=' mt-10' type="submit" value="Add Review" />
+                <input className='my-6' type="submit" value="Add Review" />
             </form>
         </div>
     );
