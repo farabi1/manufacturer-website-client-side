@@ -15,6 +15,9 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import MyPortfolio from './Pages/My Portfolio/MyPortfolio';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <div className="app">
@@ -39,6 +42,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
