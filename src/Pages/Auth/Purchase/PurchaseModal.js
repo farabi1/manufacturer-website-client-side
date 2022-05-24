@@ -8,7 +8,7 @@ const PurchaseModal = ({ purchase }) => {
 
     const { _id, name, price } = purchase || {};
 
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     const handlePurchase = event => {
         event.preventDefault();
