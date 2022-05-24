@@ -18,10 +18,10 @@ const PurchaseModal = ({ purchase }) => {
                     <h3 className="font-bold text-lg text-primary">Customer Name : {name}</h3>
                     <form onSubmit={handlePurchase} className='grid grid-cols-1 gap-4 mt-3'>
                         <input type="text" readOnly value={price} class="input input-bordered input-success w-full max-w-xs" />
-                        <input type="text" name="name" placeholder="Your Name" class="input input-bordered input-success w-full max-w-xs" />
-                        <input type="email" name="email" placeholder="Email address" class="input input-bordered input-success w-full max-w-xs" />
-                        <input type="text" name="address" placeholder="Home Address" class="input input-bordered input-success w-full max-w-xs" />
-                        <input type="submit" value="submit" placeholder="Type here" class="btn btn-secondary input-success w-full max-w-xs" />
+                        <input type="text" name="name" placeholder="Your Name" className="input input-bordered input-success w-full max-w-xs" />
+                        <input type="email" name="email" placeholder="Email address" className="input input-bordered input-success w-full max-w-xs" />
+                        <input type="text" name="address" placeholder="Home Address" className="input input-bordered input-success w-full max-w-xs" />
+                        <input type="submit" value="submit" placeholder="Type here" className="btn btn-secondary input-success w-full max-w-xs" />
                     </form>
 
                 </div>
