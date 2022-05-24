@@ -4,9 +4,9 @@ const Review = ({ review }) => {
 
     const { name, text, rate } = review;
     return (
-        <div class="card w-96 bg-primary text-primary-content">
-            <div class="card-body">
-                <h2 class="card-title">{name}</h2>
+        <div className="card w-96 bg-primary text-primary-content">
+            <div className="card-body">
+                <h2 className="card-title">{name}</h2>
                 <h2>{text}</h2>
                 <p>{rate}</p>
             </div>
