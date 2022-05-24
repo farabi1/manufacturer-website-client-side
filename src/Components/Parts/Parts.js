@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PurchaseModal from '../../Pages/Auth/Purchase/PurchaseModal';
 import Part from './Part';
 
 const Parts = () => {

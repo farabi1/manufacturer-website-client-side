@@ -4,6 +4,8 @@ import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
 import PurchaseModal from './PurchaseModal';
 
+
+
 const Purchase = () => {
     const [purchase, setPurchase] = useState(null);
 
@@ -32,8 +34,8 @@ const Purchase = () => {
                     <p>Available : {parts.availquantity}</p>
                     <p>Price : ${parts.price}</p>
                     <div className="card-actions justify-center">
+                        <label onClick={() => setPurchase(parts)} htmlFor="purchase-modal" className="btn btn-primary">Buy Now</label>
 
-                        <label onClick={() => setPurchase(parts)} for="purchase-modal" className="btn btn-primary">Buy Now</label>
                     </div>
                 </div>
             </div>
