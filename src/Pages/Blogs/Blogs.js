@@ -6,7 +6,7 @@ const Blogs = () => {
     return (
         <div>
             <Header></Header>
-            <div className="grid grid-cols-1 gap-4 mx-12">
+            <div className="grid grid-cols-1 gap-4 mx-12 justify-center	">
                 <div class="card w-96 bg-base-100 shadow-xl card-bordered border-white">
                     <div class="card-body">
                         <h2 class="card-title">Question : How will you improve the performance of a React Application?</h2>
