@@ -1,5 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../../firebase.init'
 
 
@@ -13,7 +14,7 @@ const PurchaseModal = ({ purchase }) => {
         event.preventDefault();
         const quantity = event.target.quantity.value;
         console.log(quantity);
-        const purchasing = {
+        const order = {
             purchaseId: _id,
             purchase: name,
             quantity,
@@ -22,6 +23,24 @@ const PurchaseModal = ({ purchase }) => {
             address: event.target.address.value
 
         }
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    toast.success(`Order is set`)
+                }
+                else {
+                    toast.error(`Already have and Order`)
+                }
+
+            });
 
     }
 
