@@ -3,7 +3,21 @@ import { useForm } from "react-hook-form";
 
 const AddProducts = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data)
+        const url = `http://localhost:5000/purchase`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
+    };
     return (
         <div>
             <h1 className='text-center text-5xl hover:underline font-bold mt-12 mb-2'>Add Some Products For you Customer</h1>
