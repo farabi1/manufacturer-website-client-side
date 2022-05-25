@@ -2,6 +2,7 @@ import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../../../firebase.init';
 
 const MyOrders = () => {
@@ -19,6 +20,11 @@ const MyOrders = () => {
 
         }
     }, [user])
+
+    const handlePending = () => {
+        toast.error(`You Cannot Change the pending State`);
+    }
+
     return (
         <div>
             <h1>My order List: {orders.length}</h1>
@@ -32,6 +38,7 @@ const MyOrders = () => {
                             <th>Email</th>
                             <th>Product</th>
                             <th>Address</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,6 +50,7 @@ const MyOrders = () => {
                                     <td>{order.customerMail}</td>
                                     <td>{order.purchase}</td>
                                     <td>{order.address}</td>
+                                    <td><button onClick={handlePending} className="btn btn-outline btn-warning btn-sm cursor-not-allowed" >Pending</button></td>
                                 </tr>)
                         }
 
