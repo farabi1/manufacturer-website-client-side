@@ -33,7 +33,7 @@ const PurchaseModal = ({ purchase }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.success) {
+                if (data) {
                     toast.success(`Order is set`)
                 }
                 else {
