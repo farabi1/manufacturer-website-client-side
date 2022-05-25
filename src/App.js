@@ -38,7 +38,7 @@ function App() {
           <Route path="addreviews" element={<AddReviews></AddReviews>}></Route>
           <Route path="manageallorder" element={<ManageAllOrders></ManageAllOrders>}></Route>
           <Route path="manageproduct" element={<ManageProducts></ManageProducts>}></Route>
-          <Route path="makeadmin" element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path="users" element={<MakeAdmin></MakeAdmin>}></Route>
           <Route path="addproducts" element={<AddProducts></AddProducts>}></Route>
         </Route>
         <Route path="myportfolio" element={<MyPortfolio />} />
