@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Review = ({ review }) => {
 
     const { name, text, rate } = review;
@@ -8,7 +9,8 @@ const Review = ({ review }) => {
             <div className="card-body">
                 <h2 className="card-title text-3xl font-semibold">Client Name: {name}</h2>
                 <h2 className="card-title text-2xl font-sans">Statement : {text}</h2>
-                <p>{rate}</p>
+                <p>Given ratings : {rate}</p>
+
             </div>
         </div>
     );
