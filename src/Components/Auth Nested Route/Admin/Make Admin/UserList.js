@@ -1,7 +1,8 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const UserList = ({ user }) => {
-    const { email } = user;
+const UserList = ({ user, refetch }) => {
+    const { email, role } = user;
 
     const appointAdmin = () => {
         fetch(`http://localhost:5000/users/admin/${email}`, {
@@ -14,6 +15,9 @@ const UserList = ({ user }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                toast.success(`This User is Now An Admin`);
+                refetch();
+
             })
 
     }
@@ -21,7 +25,7 @@ const UserList = ({ user }) => {
         <tr>
 
             <td>{email}</td>
-            <td><button onClick={appointAdmin} className="btn btn-outline btn-success btn-sm">Make Admin</button></td>
+            <td>{role !== 'admin' && <button onClick={appointAdmin} className="btn btn-outline btn-success btn-sm">Make Admin</button> || <button className="btn btn-outline btn-success btn-sm">Admin</button>}</td>
             <td><button className="btn btn-outline btn-error btn-sm">Remove User</button></td>
 
         </tr>
