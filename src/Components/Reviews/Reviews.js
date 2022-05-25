@@ -11,12 +11,14 @@ const Reviews = () => {
     }, [])
     return (
         <div>
-            <h1 className='text-center text-2xl font-bold mb-12'>Reviews</h1>
-            <div className='grid grid-cols-1 lg:grid-cols-3 my-12 gap-5'>
-                {
-                    reviews.map((review, index) => <Review key={index} review={review}></Review>)
-                }
-            </div >
+            <h1 className='text-center text-5xl hover:underline font-bold mt-12 mb-2'>Reviews</h1>
+            <div className="flex justify-center">
+                <div className='grid grid-cols-1 lg:grid-cols-3 my-12 gap-5'>
+                    {
+                        reviews.map((review, index) => <Review key={index} review={review}></Review>)
+                    }
+                </div >
+            </div>
         </div>
     );
 };

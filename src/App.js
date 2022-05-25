@@ -21,6 +21,7 @@ import ManageAllOrders from './Components/Auth Nested Route/Admin/Manage All Ord
 import ManageProducts from './Components/Auth Nested Route/Admin/Manage Products/ManageProducts';
 import MakeAdmin from './Components/Auth Nested Route/Admin/Make Admin/MakeAdmin';
 import AddProducts from './Components/Auth Nested Route/Admin/Add A Product/AddProducts';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
         } />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
     </div>
