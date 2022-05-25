@@ -45,9 +45,15 @@ const Signup = () => {
 
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-        navigate('/dashboard');
 
-    };
+
+    }
+
+    if (token) {
+        navigate('/dashboard');
+    }
+
+
     return (
         <div>
             <Header></Header>
@@ -142,7 +148,7 @@ const Signup = () => {
                         <div className="divider text-black font-bold text-sm">OR</div>
 
                         <button
-                            onClick={() => createUserWithEmailAndPassword()}
+                            onClick={() => signInWithGoogle()}
                             className="btn btn-outline btn-success text-lg"
                         >Continue With Google</button>
                     </div>

@@ -17,6 +17,10 @@ import MyPortfolio from './Pages/My Portfolio/MyPortfolio';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ManageAllOrders from './Components/Auth Nested Route/Admin/Manage All Orders/ManageAllOrders';
+import ManageProducts from './Components/Auth Nested Route/Admin/Manage Products/ManageProducts';
+import MakeAdmin from './Components/Auth Nested Route/Admin/Make Admin/MakeAdmin';
+import AddProducts from './Components/Auth Nested Route/Admin/Add A Product/AddProducts';
 
 function App() {
   return (
@@ -32,6 +36,10 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
           <Route path="addreviews" element={<AddReviews></AddReviews>}></Route>
+          <Route path="manageallorder" element={<ManageAllOrders></ManageAllOrders>}></Route>
+          <Route path="manageproduct" element={<ManageProducts></ManageProducts>}></Route>
+          <Route path="makeadmin" element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path="addproducts" element={<AddProducts></AddProducts>}></Route>
         </Route>
         <Route path="myportfolio" element={<MyPortfolio />} />
         <Route path="purchase/:purchaseId" element={

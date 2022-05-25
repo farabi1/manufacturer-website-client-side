@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../../../Components/Loading/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../../Components/Hooks/useToken';
 
 
 const Login = () => {
@@ -27,6 +28,14 @@ const Login = () => {
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
 
+    const [token] = useToken(user || gUser);
+
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true });
+        }
+    }, [token, from, navigate])
+
     if (loading || gLoading) {
         return <Loading></Loading>
     }
@@ -34,9 +43,11 @@ const Login = () => {
     if (error || gError) {
         signInError = <h3 className=' text-red-600'>{error?.message || gError?.message}</h3>
     }
-    if (user || gUser) {
-        navigate(from, { replace: true });
-    }
+    // useEffect(() => {
+    //     if (user || gUser) {
+    //         navigate(from, { replace: true });
+    //     }
+    // }, [user, gUser, from, navigate])
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
