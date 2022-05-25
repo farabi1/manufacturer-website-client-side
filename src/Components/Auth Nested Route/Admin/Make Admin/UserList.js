@@ -14,9 +14,11 @@ const UserList = ({ user, refetch }) => {
         })
             .then(res => res.json())
             .then(data => {
+
                 console.log(data);
                 toast.success(`This User is Now An Admin`);
                 refetch();
+
 
             })
 
