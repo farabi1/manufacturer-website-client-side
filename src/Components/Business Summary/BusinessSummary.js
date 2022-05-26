@@ -5,7 +5,7 @@ const BusinessSummary = () => {
         <div>
             <h1 className='text-center text-5xl hover:underline font-bold mt-12 mb-2'> Business Summary</h1>
 
-            <div className="">
+            <div >
                 <div className="stats shadow flex justify-center mx-16 my-16">
 
                     <div className="stat border-4">
