@@ -58,7 +58,7 @@ const Signup = () => {
         <div>
             <Header></Header>
 
-            {/* -------------- */}
+
 
             <div className="flex h-screen justify-center items-center">
                 <div className="card w-96 bg-slate-50 shadow-xl">
@@ -156,7 +156,7 @@ const Signup = () => {
             </div>
 
 
-            {/* ------------------ */}
+
 
             <Footer></Footer>
         </div>

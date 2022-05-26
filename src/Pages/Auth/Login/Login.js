@@ -43,11 +43,7 @@ const Login = () => {
     if (error || gError) {
         signInError = <h3 className=' text-red-600'>{error?.message || gError?.message}</h3>
     }
-    // useEffect(() => {
-    //     if (user || gUser) {
-    //         navigate(from, { replace: true });
-    //     }
-    // }, [user, gUser, from, navigate])
+
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
@@ -57,7 +53,7 @@ const Login = () => {
         <div>
             <Header></Header>
 
-            {/* -------------- */}
+
 
             <div className="flex h-screen justify-center items-center">
                 <div className="card w-96 bg-slate-50 shadow-xl">
@@ -135,7 +131,7 @@ const Login = () => {
             </div>
 
 
-            {/* ------------------ */}
+
 
             <Footer></Footer>
         </div>
