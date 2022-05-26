@@ -45,6 +45,8 @@ const PurchaseModal = ({ purchase }) => {
     }
 
 
+
+
     return (
         <div>
             <input type="checkbox" id="purchase-modal" className="modal-toggle" />
@@ -61,7 +63,7 @@ const PurchaseModal = ({ purchase }) => {
 
                         <input type="text" name="address" placeholder="Home Address" className="input input-bordered input-success w-full max-w-xs" />
 
-                        <input name="quantity" className="input input-bordered input-success w-full max-w-xs" />
+                        <input type="number" name="quantity" min={40} max={100} placeholder="Enter No of Products" className="input input-bordered input-success w-full max-w-xs" />
 
                         <input type="submit" value="submit" placeholder="Type here" className="btn btn-secondary input-success w-full max-w-xs" />
                     </form>
