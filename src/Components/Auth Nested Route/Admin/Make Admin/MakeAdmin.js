@@ -7,7 +7,7 @@ import UserList from './UserList';
 const MakeAdmin = () => {
 
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/users')
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://immense-shore-60421.herokuapp.com/users')
         .then(res => res.json()));
     if (isLoading) {
         return <Loading></Loading>

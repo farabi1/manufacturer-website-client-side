@@ -7,7 +7,7 @@ const ManageProducts = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/purchase')
+        fetch('https://immense-shore-60421.herokuapp.com/purchase')
             .then(res => res.json())
             .then(data => setParts(data));
     }, [])
@@ -15,7 +15,7 @@ const ManageProducts = () => {
 
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/purchase/${id}`;
+        const url = `https://immense-shore-60421.herokuapp.com/purchase/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

@@ -5,7 +5,7 @@ const UserList = ({ user, refetch }) => {
     const { email, role } = user;
 
     const appointAdmin = () => {
-        fetch(`http://localhost:5000/users/admin/${email}`, {
+        fetch(`https://immense-shore-60421.herokuapp.com/users/admin/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -15,7 +15,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Home from './Pages/Home/Home';
 import MyPortfolio from './Pages/My Portfolio/MyPortfolio';
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ManageAllOrders from './Components/Auth Nested Route/Admin/Manage All Orders/ManageAllOrders';
 import ManageProducts from './Components/Auth Nested Route/Admin/Manage Products/ManageProducts';

@@ -4,7 +4,7 @@ const usePurchase = () => {
     const [purchase, setPurchase] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/purchase')
+        fetch('https://immense-shore-60421.herokuapp.com/purchase')
             .then(res => res.json())
             .then(data => setPurchase(data));
     }, []);

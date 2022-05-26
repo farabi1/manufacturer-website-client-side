@@ -5,7 +5,7 @@ const AddProducts = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/purchase`;
+        const url = `https://immense-shore-60421.herokuapp.com/purchase`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -14,7 +14,7 @@ const Purchase = () => {
     const [parts, setParts] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/purchase/${purchaseId}`;
+        const url = `https://immense-shore-60421.herokuapp.com/purchase/${purchaseId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setParts(data));

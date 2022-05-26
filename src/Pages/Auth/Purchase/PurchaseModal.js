@@ -23,7 +23,7 @@ const PurchaseModal = ({ purchase }) => {
             address: event.target.address.value
 
         }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://immense-shore-60421.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
